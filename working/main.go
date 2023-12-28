@@ -12,7 +12,7 @@ import (
 
 func main() {
 	l := log.New(os.Stdout, "product_api", log.LstdFlags)
-	hello_h := handlers.MakeHello(l)
+	hello_h := handlers.NewProdcut(l)
 
 	sm := http.NewServeMux()
 	sm.HandleFunc("/", hello_h.ServeHttp)
